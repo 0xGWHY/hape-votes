@@ -1,38 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* 웹 폰트 적용 */
+@import url("https://fonts.googleapis.com/css2?family=Margarine&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/* font-family: 'Margarine', cursive;
+font-family: 'Noto Sans KR', sans-serif; */
+
+.App * {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.App::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+*,
+div,
+a,
+p,
+input,
+button {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "Margarine", cursive;
+  font-size: 30px;
+  color: var(--point-color);
+}
+
+.input-hape-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateX(-50%); */
+  z-index: 100;
+}
+input {
+  background-color: black;
   color: white;
+  border: 2px solid white;
+  outline: none;
+  width: 100px;
 }
-
-.App-link {
-  color: #61dafb;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+.wrapper {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  min-width: 800px;
+}
+.hape-image {
+  width: auto;
+  height: 100vh;
+  /* dis */
+}
+.hape-number {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: solid 5px yellow;
+  color: yellow;
+  font-family: "Bungee", cursive;
+  font-size: 80px;
+}
+.hape-rank {
+  position: absolute;
+  top: 170px;
+  right: 30px;
+  color: white;
+  z-index: 2;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: white;
+  font-family: "Bungee", cursive;
+  font-size: 30px;
+}
+.hape-votes {
+  position: absolute;
+  top: 220px;
+  right: 30px;
+
+  color: white;
+  font-family: "Bungee", cursive;
+  font-size: 30px;
 }
